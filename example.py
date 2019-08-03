@@ -3,9 +3,6 @@ import utime as time
 
 rgb = RGBLed(18,19,21) # red, green and blue pins of LED to GPIO of ESP (remember to add current limiting resistor)
 
-red = 0
-blue = 0
-green = 0
 
 if __name__ == '__main__':
     rgb.on()
@@ -27,6 +24,7 @@ if __name__ == '__main__':
     time.sleep(1)
 
     #colour roll through colour spectrum (8 bit) every 30 seconds
+    
     while True:
         rgb.colour_roll_up(15)
         rgb.colour_roll_down(15)
